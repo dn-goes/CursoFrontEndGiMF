@@ -1,55 +1,64 @@
-// Array and Matrix (vetores e matrizes)
-//declarar um array => []
-let Array = [];
-let numberArray =[1,2,3,4,5,6,7,8,9];
-let texteArray = ["Sapato", "Bola", "cachorro"];
-let mixArray = [1, "Nome", true];
+		
+//Arrays e Matrix (vetores e matrizes)
+//declar um array
 
-// como faço para acessar os elementos (indice)
-console.log(texteArray[1]);  //Indice
-console.log(numberArray[8]);  //9
+let array = [];
+let numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let textoArray = ["Bola" ,  "Gato" ,  "SeiLá"];
+let mixArray = [1, "Sessenta", true];
 
-//Contar elemntos de uma array (lengt)
-console.log(numberArray.length); //9
-console.log(texteArray.length); //3
 
-// Adicionar elementos em uma Array
-// no começo  (0)
-texteArray.unshift("Cachorrro");
-console.log(texteArray);
-// no final - push
-texteArray.push("Casa");
-console.log(texteArray);
+//como acessar os elementos?? (pelo indice = quant total de elementos -1)
+console.log (textoArray [2]);  // "Gato"
+console.log (numberArray [6]);  // 7
 
-//Alterar o valor de Array
-texteArray[2] = "Carro" ;
-console.log(texteArray);
 
-//Remover elementos Array
-//do começo - shift
-texteArray.shift();
-console.log(texteArray);
+//como contar os elementos dum Array? (.length)
+console.log (numberArray.length); //9
+console.log (textoArray.length); //3
 
-//do meio - splice(indice,quantidade,)
-texteArray.splice(1,1);
-console.log(texteArray); //imprimir
 
-//do fim
-texteArray.pop();
-console.log(texteArray); //remove a ultima palvra(indice)
+//pode se adiciaonar elementos num Array?
+//pode se adicionar no começo (0) (unshift ())
+textoArray.unshift ( "Peixe" );
+console.log (textoArray);
 
-// Percorrer um Allay
-for(let i=0; i<numberArray.length; i++){
-    console.log(
-        "Numero ["+i+"]="+numberArray[i]
-    );
+//ou no final (push ())
+textoArray.push ( "Ain" );
+console.log (textoArray);
+
+
+//pode se alterar o valor do Array?
+//apenas chame o elemento
+textoArray [0] = "Rapz";
+console.log (textoArray);
+
+//removendo um elemento do Array
+//no começo (shift ())
+textoArray.shift ();
+console.log (textoArray);
+
+//no meio ( splice (indice, quantidade))
+textoArray.splice (2,1);
+console.log (textoArray);
+
+//e no finn (pop ())
+textoArray.pop();
+console.log (textoArray);
+
+
+//percorrer um Array
+//for
+for(let i=0; i < numberArray.length; i++) {
+    console.log ("Numero ["+i+"] =" +numberArray [i]);
 }
+
 //forEach
-numberArray.forEach(element => {
-    console.log(element)
-    
+numberArray.forEach (element => {
+    console.log (element);
 });
 
-//indexOF == Retorna o Indice do Elemento
-console.log(mixArray.indexOf("Nome"));
-console.log(numberArray.indexOf(10));
+//indexOf (retorna o indice do elemento)
+console.log (mixArray.indexOf ("Sessenta"));
+
+console.log (mixArray.indexOf (1000000));
